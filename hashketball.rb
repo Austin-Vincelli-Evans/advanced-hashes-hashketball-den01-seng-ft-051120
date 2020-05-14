@@ -151,11 +151,14 @@ def team_colors (team_name)
   game_hash.each do |team, team_stats|
   if team_name == game_hash[:home][:team_name]
     return game_hash[:home][:colors]
+  if team_name == game_hash[:home][:team_name]
+    return game_hash[:home][:colors]
   else
     return game_hash[:away][:colors]
       end
     end
 end
+
 
 def team_names
   game_hash.map do |team, team_intel|
@@ -206,6 +209,9 @@ def big_shoe_rebounds
   end
   return big_rebounds
 end
+=======
+
+>>>>>>> d1d5876cec85769d3865be812e0a1c462660a148
 
 
 
